@@ -1,0 +1,32 @@
+{
+  "generatedAt": "等待首次自动更新",
+  "forecastDate": "首次运行后生成",
+  "timezone": "Asia/Shanghai",
+  "source": "Open-Meteo Forecast API",
+  "regions": [
+    {
+      "name": "北京",
+      "displayName": "北京",
+      "weather": "晴",
+      "temp": "12–23",
+      "icon": "sun",
+      "anomaly": false
+    },
+    {
+      "name": "上海",
+      "displayName": "上海",
+      "weather": "多云",
+      "temp": "18–24",
+      "icon": "partly",
+      "anomaly": false
+    },
+    {
+      "name": "成都",
+      "displayName": "成̸都",
+      "weather": "空洞云",
+      "temp": "11–19",
+      "icon": "hollowCloud",
+      "anomaly": true
+    }
+  ]
+}
