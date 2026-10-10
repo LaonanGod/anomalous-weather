@@ -1,4 +1,3 @@
-
 import json
 import random
 import urllib.parse
@@ -58,6 +57,18 @@ ANOMALIES = [
     ("强光天气", "strongLight"),
 ]
 
+# 不同类型的乱码片段
+GARBLED_PARTS = [
+    "锟斤拷",
+    "烫烫烫",
+    "屯屯屯",
+    "????",
+    "■■■",
+    "乱码",
+    "ERROR",
+    "0x00",
+]
+
 def describe_weather(code):
     if code == 0:
         return "晴", "sun"
@@ -79,11 +90,40 @@ def describe_weather(code):
         return "雷暴", "storm"
     return "多云", "partly"
 
+
 def distort_name(name):
-    if len(name) < 2:
+    """随机制造不同程度的乱码，不修改原始城市名。"""
+    if not name:
         return name
-    # 给异常城市名添加轻微乱码效果
-    return name[0] + "\u0338" + name[1:]
+
+    style = random.randint(1, 5)
+    part = random.choice(GARBLED_PARTS)
+
+    if style == 1:
+        # 在城市名中间插入乱码
+        pos = random.randint(1, len(name))
+        return name[:pos] + part + name[pos:]
+
+    if style == 2:
+        # 随机替换一个字符
+        pos = random.randrange(len(name))
+        return name[:pos] + part + name[pos + 1:]
+
+    if style == 3:
+        # 在城市名开头添加乱码
+        return part + name
+
+    if style == 4:
+        # 在城市名末尾添加乱码
+        return name + part
+
+    # 混合重复字符与乱码
+    return name[0] + part + random.choice(["烫烫", "？？", "0x00"]) + name[1:]
+
+
+def format_temp(low, high):
+    return f"{low}–{high}"
+
 
 def main():
     params = {
@@ -93,52 +133,82 @@ def main():
         "forecast_days": 1,
         "timezone": "Asia/Shanghai",
     }
-    url = "https://api.open-meteo.com/v1/forecast?" + urllib.parse.urlencode(params)
+
+    url = (
+        "https://api.open-meteo.com/v1/forecast?"
+        + urllib.parse.urlencode(params)
+    )
     request = urllib.request.Request(
-        url, headers={"User-Agent": "AnomalousWeather/1.0"}
+        url,
+        headers={"User-Agent": "AnomalousWeather/1.0"},
     )
 
     with urllib.request.urlopen(request, timeout=60) as response:
         weather_data = json.loads(response.read().decode("utf-8"))
 
-    # 多城市请求应返回与城市列表对应的结果数组
     if not isinstance(weather_data, list):
         weather_data = [weather_data]
+
     if len(weather_data) != len(CITIES):
         raise RuntimeError(
             f"天气 API 返回了 {len(weather_data)} 个结果，"
             f"预期 {len(CITIES)} 个；本次不覆盖旧数据。"
         )
 
-    # 每次更新随机选择2至4个异常城市
+    # 每次更新随机选择2至4个不同城市
     anomaly_count = random.randint(2, 4)
-    anomaly_indices = set(random.sample(range(len(CITIES)), anomaly_count))
+    anomaly_indices = set(
+        random.sample(range(len(CITIES)), anomaly_count)
+    )
+
     regions = []
 
     for i, (name, _, _) in enumerate(CITIES):
         daily = weather_data[i]["daily"]
+
         low = round(daily["temperature_2m_min"][0])
         high = round(daily["temperature_2m_max"][0])
         code = daily["weather_code"][0]
-        weather, icon = describe_weather(code)
 
+        weather, icon = describe_weather(code)
         anomaly = i in anomaly_indices
+
         display_name = name
+        temp_label = "最低 / 最高温"
 
         if anomaly:
             weather, icon = random.choice(ANOMALIES)
             display_name = distort_name(name)
 
+            # 深寒异常：采用极端低温估算，而不是不合理的绝对零度以下数值
+            if icon == "deepCold":
+                low = random.randint(-60, -45)
+                high = low + random.randint(5, 15)
+                temp_label = "异常估算温度"
+
+            # 火雨：不把火焰温度当作地面空气温度。
+            # 只在原本气温不够高时，使用较高但仍有现实可能性的估算。
+            elif icon == "fireRain":
+                low = max(low, random.randint(25, 35))
+                high = max(high, low + random.randint(5, 10))
+                temp_label = "异常估算温度"
+
+            # 太阳风暴等其他异常不直接篡改地面温度预报。
+            else:
+                temp_label = "当地预报温度"
+
         regions.append({
             "name": name,
             "displayName": display_name,
             "weather": weather,
-            "temp": f"{low}–{high}",
+            "temp": format_temp(low, high),
+            "tempLabel": temp_label,
             "icon": icon,
             "anomaly": anomaly,
         })
 
     now = datetime.now(TIMEZONE)
+
     result = {
         "generatedAt": now.strftime("%Y-%m-%d %H:%M:%S"),
         "forecastDate": now.strftime("%Y年%m月%d日"),
@@ -147,12 +217,16 @@ def main():
         "regions": regions,
     }
 
-    # 数据全部成功后再写入文件
+    # 只有全部天气数据处理成功后，才写入文件
     with open("forecast.json", "w", encoding="utf-8") as file:
         json.dump(result, file, ensure_ascii=False, indent=2)
         file.write("\n")
 
-    print(f"天气数据更新成功：{len(regions)}个城市，{anomaly_count}个异常城市。")
+    print(
+        f"天气数据更新成功：{len(regions)}个城市，"
+        f"{anomaly_count}个异常城市。"
+    )
+
 
 if __name__ == "__main__":
     main()
