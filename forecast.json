@@ -1,32 +1,280 @@
 {
-  "generatedAt": "等待首次自动更新",
-  "forecastDate": "首次运行后生成",
+  "generatedAt": "2026-10-10 20:38:58",
+  "forecastDate": "2026年10月10日",
   "timezone": "Asia/Shanghai",
   "source": "Open-Meteo Forecast API",
   "regions": [
     {
       "name": "北京",
       "displayName": "北京",
-      "weather": "晴",
-      "temp": "12–23",
-      "icon": "sun",
+      "weather": "阴",
+      "temp": "16–27",
+      "icon": "cloud",
       "anomaly": false
     },
     {
       "name": "上海",
       "displayName": "上海",
-      "weather": "多云",
-      "temp": "18–24",
+      "weather": "毛毛雨",
+      "temp": "19–26",
+      "icon": "rain",
+      "anomaly": false
+    },
+    {
+      "name": "广州",
+      "displayName": "广州",
+      "weather": "阴",
+      "temp": "22–32",
+      "icon": "cloud",
+      "anomaly": false
+    },
+    {
+      "name": "深圳",
+      "displayName": "深圳",
+      "weather": "多云间晴",
+      "temp": "22–31",
       "icon": "partly",
       "anomaly": false
     },
     {
       "name": "成都",
-      "displayName": "成̸都",
-      "weather": "空洞云",
-      "temp": "11–19",
-      "icon": "hollowCloud",
+      "displayName": "成都",
+      "weather": "降雨",
+      "temp": "17–20",
+      "icon": "rain",
+      "anomaly": false
+    },
+    {
+      "name": "重庆",
+      "displayName": "重庆",
+      "weather": "毛毛雨",
+      "temp": "20–24",
+      "icon": "rain",
+      "anomaly": false
+    },
+    {
+      "name": "武汉",
+      "displayName": "武汉",
+      "weather": "晴",
+      "temp": "18–29",
+      "icon": "sun",
+      "anomaly": false
+    },
+    {
+      "name": "西安",
+      "displayName": "西安",
+      "weather": "阴",
+      "temp": "15–25",
+      "icon": "cloud",
+      "anomaly": false
+    },
+    {
+      "name": "南京",
+      "displayName": "南京",
+      "weather": "大致晴朗",
+      "temp": "16–26",
+      "icon": "sun",
+      "anomaly": false
+    },
+    {
+      "name": "杭州",
+      "displayName": "杭州",
+      "weather": "阴",
+      "temp": "16–27",
+      "icon": "cloud",
+      "anomaly": false
+    },
+    {
+      "name": "天津",
+      "displayName": "天津",
+      "weather": "阴",
+      "temp": "16–27",
+      "icon": "cloud",
+      "anomaly": false
+    },
+    {
+      "name": "苏州",
+      "displayName": "苏州",
+      "weather": "毛毛雨",
+      "temp": "17–26",
+      "icon": "rain",
+      "anomaly": false
+    },
+    {
+      "name": "郑州",
+      "displayName": "郑州",
+      "weather": "阴",
+      "temp": "18–30",
+      "icon": "cloud",
+      "anomaly": false
+    },
+    {
+      "name": "长沙",
+      "displayName": "长沙",
+      "weather": "晴",
+      "temp": "18–28",
+      "icon": "sun",
+      "anomaly": false
+    },
+    {
+      "name": "合肥",
+      "displayName": "合肥",
+      "weather": "晴",
+      "temp": "15–26",
+      "icon": "sun",
+      "anomaly": false
+    },
+    {
+      "name": "济南",
+      "displayName": "济̸南",
+      "weather": "强光天气",
+      "temp": "17–28",
+      "icon": "strongLight",
       "anomaly": true
+    },
+    {
+      "name": "青岛",
+      "displayName": "青岛",
+      "weather": "阴",
+      "temp": "16–24",
+      "icon": "cloud",
+      "anomaly": false
+    },
+    {
+      "name": "沈阳",
+      "displayName": "沈阳",
+      "weather": "阴",
+      "temp": "12–21",
+      "icon": "cloud",
+      "anomaly": false
+    },
+    {
+      "name": "大连",
+      "displayName": "大连",
+      "weather": "毛毛雨",
+      "temp": "18–22",
+      "icon": "rain",
+      "anomaly": false
+    },
+    {
+      "name": "长春",
+      "displayName": "长春",
+      "weather": "阴",
+      "temp": "8–18",
+      "icon": "cloud",
+      "anomaly": false
+    },
+    {
+      "name": "哈尔滨",
+      "displayName": "哈尔滨",
+      "weather": "阴",
+      "temp": "4–13",
+      "icon": "cloud",
+      "anomaly": false
+    },
+    {
+      "name": "石家庄",
+      "displayName": "石家庄",
+      "weather": "多云间晴",
+      "temp": "14–27",
+      "icon": "partly",
+      "anomaly": false
+    },
+    {
+      "name": "太原",
+      "displayName": "太原",
+      "weather": "多云间晴",
+      "temp": "11–23",
+      "icon": "partly",
+      "anomaly": false
+    },
+    {
+      "name": "呼和浩特",
+      "displayName": "呼̸和浩特",
+      "weather": "太阳风暴",
+      "temp": "6–20",
+      "icon": "solarStorm",
+      "anomaly": true
+    },
+    {
+      "name": "兰州",
+      "displayName": "兰州",
+      "weather": "阴",
+      "temp": "6–20",
+      "icon": "cloud",
+      "anomaly": false
+    },
+    {
+      "name": "西宁",
+      "displayName": "西̸宁",
+      "weather": "火雨",
+      "temp": "2–16",
+      "icon": "fireRain",
+      "anomaly": true
+    },
+    {
+      "name": "银川",
+      "displayName": "银川",
+      "weather": "晴",
+      "temp": "6–22",
+      "icon": "sun",
+      "anomaly": false
+    },
+    {
+      "name": "乌鲁木齐",
+      "displayName": "乌鲁木齐",
+      "weather": "阴",
+      "temp": "10–19",
+      "icon": "cloud",
+      "anomaly": false
+    },
+    {
+      "name": "拉萨",
+      "displayName": "拉萨",
+      "weather": "降雪",
+      "temp": "2–12",
+      "icon": "snow",
+      "anomaly": false
+    },
+    {
+      "name": "昆明",
+      "displayName": "昆明",
+      "weather": "毛毛雨",
+      "temp": "11–22",
+      "icon": "rain",
+      "anomaly": false
+    },
+    {
+      "name": "贵阳",
+      "displayName": "贵̸阳",
+      "weather": "逆向降雨",
+      "temp": "13–25",
+      "icon": "inverseRain",
+      "anomaly": true
+    },
+    {
+      "name": "南宁",
+      "displayName": "南宁",
+      "weather": "晴",
+      "temp": "22–32",
+      "icon": "sun",
+      "anomaly": false
+    },
+    {
+      "name": "福州",
+      "displayName": "福州",
+      "weather": "阴",
+      "temp": "20–30",
+      "icon": "cloud",
+      "anomaly": false
+    },
+    {
+      "name": "厦门",
+      "displayName": "厦门",
+      "weather": "大致晴朗",
+      "temp": "21–32",
+      "icon": "sun",
+      "anomaly": false
     }
   ]
 }
