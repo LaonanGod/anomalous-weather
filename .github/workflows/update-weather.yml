@@ -4,7 +4,7 @@ name: Update Strange Weather
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 23 * * *"
+    - cron: "0 11 * * *"
 
 permissions:
   contents: write
@@ -12,9 +12,23 @@ permissions:
 jobs:
   update-weather:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Show workflow status
-        run: echo "Weather update workflow is running"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate weather data
+        run: python update_weather.py
+
+      - name: Save updated forecast
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add forecast.json
+          git diff --cached --quiet || git commit -m "Update weather forecast"
+          git push
