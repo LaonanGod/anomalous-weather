@@ -1,50 +1,50 @@
 {
-  "generatedAt": "2026-10-17 21:59:27",
-  "forecastDate": "2026年10月17日",
+  "generatedAt": "2026-10-18 22:12:17",
+  "forecastDate": "2026年10月18日",
   "timezone": "Asia/Shanghai",
   "source": "Open-Meteo Forecast API",
   "regions": [
     {
       "name": "北京",
       "displayName": "北京",
-      "weather": "降雨",
-      "temp": "13–16",
-      "tempLabel": "最低 / 最高温",
-      "icon": "rain",
-      "anomaly": false
-    },
-    {
-      "name": "上海",
-      "displayName": "上海",
       "weather": "阴",
-      "temp": "21–30",
+      "temp": "10–17",
       "tempLabel": "最低 / 最高温",
       "icon": "cloud",
       "anomaly": false
     },
     {
+      "name": "上海",
+      "displayName": "上海",
+      "weather": "降雨",
+      "temp": "21–33",
+      "tempLabel": "最低 / 最高温",
+      "icon": "rain",
+      "anomaly": false
+    },
+    {
       "name": "广州",
       "displayName": "广州",
-      "weather": "大致晴朗",
+      "weather": "毛毛雨",
       "temp": "24–33",
       "tempLabel": "最低 / 最高温",
-      "icon": "sun",
+      "icon": "rain",
       "anomaly": false
     },
     {
       "name": "深圳",
       "displayName": "深圳",
-      "weather": "毛毛雨",
-      "temp": "24–31",
+      "weather": "阴",
+      "temp": "24–32",
       "tempLabel": "最低 / 最高温",
-      "icon": "rain",
+      "icon": "cloud",
       "anomaly": false
     },
     {
       "name": "成都",
       "displayName": "成都",
       "weather": "毛毛雨",
-      "temp": "18–24",
+      "temp": "16–20",
       "tempLabel": "最低 / 最高温",
       "icon": "rain",
       "anomaly": false
@@ -52,17 +52,17 @@
     {
       "name": "重庆",
       "displayName": "重庆",
-      "weather": "雷暴",
-      "temp": "21–26",
+      "weather": "毛毛雨",
+      "temp": "18–23",
       "tempLabel": "最低 / 最高温",
-      "icon": "storm",
+      "icon": "rain",
       "anomaly": false
     },
     {
       "name": "武汉",
       "displayName": "武汉",
       "weather": "降雨",
-      "temp": "22–30",
+      "temp": "16–22",
       "tempLabel": "最低 / 最高温",
       "icon": "rain",
       "anomaly": false
@@ -70,8 +70,8 @@
     {
       "name": "西安",
       "displayName": "西安",
-      "weather": "降雨",
-      "temp": "14–18",
+      "weather": "毛毛雨",
+      "temp": "10–17",
       "tempLabel": "最低 / 最高温",
       "icon": "rain",
       "anomaly": false
@@ -79,8 +79,8 @@
     {
       "name": "南京",
       "displayName": "南京",
-      "weather": "毛毛雨",
-      "temp": "20–29",
+      "weather": "降雨",
+      "temp": "17–25",
       "tempLabel": "最低 / 最高温",
       "icon": "rain",
       "anomaly": false
@@ -88,35 +88,35 @@
     {
       "name": "杭州",
       "displayName": "杭州",
-      "weather": "阴",
-      "temp": "20–31",
-      "tempLabel": "最低 / 最高温",
-      "icon": "cloud",
-      "anomaly": false
-    },
-    {
-      "name": "天津",
-      "displayName": "天津",
-      "weather": "降雨",
-      "temp": "17–20",
+      "weather": "毛毛雨",
+      "temp": "21–32",
       "tempLabel": "最低 / 最高温",
       "icon": "rain",
       "anomaly": false
     },
     {
-      "name": "苏州",
-      "displayName": "苏州",
+      "name": "天津",
+      "displayName": "天津",
       "weather": "阴",
-      "temp": "20–28",
+      "temp": "12–18",
       "tempLabel": "最低 / 最高温",
       "icon": "cloud",
       "anomaly": false
     },
     {
+      "name": "苏州",
+      "displayName": "苏州",
+      "weather": "降雨",
+      "temp": "20–28",
+      "tempLabel": "最低 / 最高温",
+      "icon": "rain",
+      "anomaly": false
+    },
+    {
       "name": "郑州",
       "displayName": "郑州",
-      "weather": "降雨",
-      "temp": "16–20",
+      "weather": "毛毛雨",
+      "temp": "16–21",
       "tempLabel": "最低 / 最高温",
       "icon": "rain",
       "anomaly": false
@@ -124,161 +124,161 @@
     {
       "name": "长沙",
       "displayName": "长沙",
-      "weather": "多云间晴",
-      "temp": "23–31",
+      "weather": "阴",
+      "temp": "18–26",
       "tempLabel": "最低 / 最高温",
-      "icon": "partly",
+      "icon": "cloud",
       "anomaly": false
     },
     {
       "name": "合肥",
       "displayName": "合肥",
-      "weather": "毛毛雨",
-      "temp": "21–29",
+      "weather": "降雨",
+      "temp": "17–23",
       "tempLabel": "最低 / 最高温",
       "icon": "rain",
       "anomaly": false
     },
     {
       "name": "济南",
-      "displayName": "济南",
-      "weather": "降雨",
-      "temp": "18–24",
-      "tempLabel": "最低 / 最高温",
-      "icon": "rain",
-      "anomaly": false
+      "displayName": "济南????",
+      "weather": "太阳风暴",
+      "temp": "12–19",
+      "tempLabel": "当地预报温度",
+      "icon": "solarStorm",
+      "anomaly": true
     },
     {
       "name": "青岛",
       "displayName": "青岛",
       "weather": "雷暴",
-      "temp": "21–23",
+      "temp": "15–22",
       "tempLabel": "最低 / 最高温",
       "icon": "storm",
       "anomaly": false
     },
     {
       "name": "沈阳",
-      "displayName": "烫烫烫沈阳",
-      "weather": "火雨",
-      "temp": "31–41",
-      "tempLabel": "异常估算温度",
-      "icon": "fireRain",
-      "anomaly": true
+      "displayName": "沈阳",
+      "weather": "降雨",
+      "temp": "8–16",
+      "tempLabel": "最低 / 最高温",
+      "icon": "rain",
+      "anomaly": false
     },
     {
       "name": "大连",
       "displayName": "大连",
       "weather": "雷暴",
-      "temp": "18–20",
+      "temp": "13–21",
       "tempLabel": "最低 / 最高温",
       "icon": "storm",
       "anomaly": false
     },
     {
       "name": "长春",
-      "displayName": "长春",
-      "weather": "阴",
-      "temp": "5–18",
-      "tempLabel": "最低 / 最高温",
-      "icon": "cloud",
-      "anomaly": false
+      "displayName": "长乱码烫烫春",
+      "weather": "空洞云",
+      "temp": "3–14",
+      "tempLabel": "当地预报温度",
+      "icon": "hollowCloud",
+      "anomaly": true
     },
     {
       "name": "哈尔滨",
-      "displayName": "哈尔滨",
-      "weather": "阴",
-      "temp": "1–14",
-      "tempLabel": "最低 / 最高温",
-      "icon": "cloud",
-      "anomaly": false
+      "displayName": "哈????烫烫尔滨",
+      "weather": "逆向降雨",
+      "temp": "3–12",
+      "tempLabel": "当地预报温度",
+      "icon": "inverseRain",
+      "anomaly": true
     },
     {
       "name": "石家庄",
       "displayName": "石家庄",
-      "weather": "降雨",
-      "temp": "14–18",
+      "weather": "阴",
+      "temp": "13–20",
       "tempLabel": "最低 / 最高温",
-      "icon": "rain",
+      "icon": "cloud",
       "anomaly": false
     },
     {
       "name": "太原",
       "displayName": "太原",
-      "weather": "降雨",
-      "temp": "10–15",
+      "weather": "阴",
+      "temp": "7–16",
       "tempLabel": "最低 / 最高温",
-      "icon": "rain",
+      "icon": "cloud",
       "anomaly": false
     },
     {
       "name": "呼和浩特",
       "displayName": "呼和浩特",
-      "weather": "降雨",
-      "temp": "2–12",
+      "weather": "晴",
+      "temp": "-1–9",
       "tempLabel": "最低 / 最高温",
-      "icon": "rain",
+      "icon": "sun",
       "anomaly": false
     },
     {
       "name": "兰州",
       "displayName": "兰州",
-      "weather": "降雨",
-      "temp": "5–10",
+      "weather": "阴",
+      "temp": "4–15",
       "tempLabel": "最低 / 最高温",
-      "icon": "rain",
+      "icon": "cloud",
       "anomaly": false
     },
     {
       "name": "西宁",
-      "displayName": "锟斤拷西宁",
-      "weather": "强光天气",
-      "temp": "1–10",
-      "tempLabel": "当地预报温度",
-      "icon": "strongLight",
-      "anomaly": true
+      "displayName": "西宁",
+      "weather": "阴",
+      "temp": "0–13",
+      "tempLabel": "最低 / 最高温",
+      "icon": "cloud",
+      "anomaly": false
     },
     {
       "name": "银川",
       "displayName": "银川",
-      "weather": "降雨",
-      "temp": "6–12",
+      "weather": "晴",
+      "temp": "1–15",
       "tempLabel": "最低 / 最高温",
-      "icon": "rain",
+      "icon": "sun",
       "anomaly": false
     },
     {
       "name": "乌鲁木齐",
       "displayName": "乌鲁木齐",
-      "weather": "多云间晴",
-      "temp": "-2–9",
+      "weather": "阴",
+      "temp": "-1–10",
       "tempLabel": "最低 / 最高温",
-      "icon": "partly",
+      "icon": "cloud",
       "anomaly": false
     },
     {
       "name": "拉萨",
       "displayName": "拉萨",
-      "weather": "阴",
-      "temp": "2–17",
+      "weather": "多云间晴",
+      "temp": "2–16",
       "tempLabel": "最低 / 最高温",
-      "icon": "cloud",
+      "icon": "partly",
       "anomaly": false
     },
     {
       "name": "昆明",
       "displayName": "昆明",
-      "weather": "阴",
-      "temp": "14–25",
+      "weather": "毛毛雨",
+      "temp": "12–25",
       "tempLabel": "最低 / 最高温",
-      "icon": "cloud",
+      "icon": "rain",
       "anomaly": false
     },
     {
       "name": "贵阳",
       "displayName": "贵阳",
-      "weather": "毛毛雨",
-      "temp": "18–26",
+      "weather": "降雨",
+      "temp": "17–24",
       "tempLabel": "最低 / 最高温",
       "icon": "rain",
       "anomaly": false
@@ -287,27 +287,27 @@
       "name": "南宁",
       "displayName": "南宁",
       "weather": "毛毛雨",
-      "temp": "24–31",
+      "temp": "24–32",
       "tempLabel": "最低 / 最高温",
       "icon": "rain",
       "anomaly": false
     },
     {
       "name": "福州",
-      "displayName": "福烫烫烫？？州",
-      "weather": "冰晶坠落",
-      "temp": "24–28",
-      "tempLabel": "当地预报温度",
-      "icon": "icefall",
-      "anomaly": true
+      "displayName": "福州",
+      "weather": "阴",
+      "temp": "25–34",
+      "tempLabel": "最低 / 最高温",
+      "icon": "cloud",
+      "anomaly": false
     },
     {
       "name": "厦门",
       "displayName": "厦门",
-      "weather": "阴",
-      "temp": "24–32",
+      "weather": "雾",
+      "temp": "24–34",
       "tempLabel": "最低 / 最高温",
-      "icon": "cloud",
+      "icon": "fog",
       "anomaly": false
     }
   ]
